@@ -1,0 +1,32 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #171717;
+  --hoveredBackground: #befc65;
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+
+
+body {
+  background: var(--background);
+  color: var(--background);
+  font-family: var(--font-poppins);
+}
+@font-face {
+  font-family: "italic";
+  src: url("../public/fonts//PPEditorialNew-Italic-BF644b214fb0c0a.otf")
+    format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+.italic {
+  font-family: "italic";
+}
