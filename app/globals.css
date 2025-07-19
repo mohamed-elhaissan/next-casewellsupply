@@ -3,7 +3,7 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
-  --hoveredBackground : #befc65;
+  --hoveredBackground: #befc65;
 }
 
 @theme inline {
@@ -13,15 +13,20 @@
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
+
 
 body {
   background: var(--background);
   color: var(--background);
   font-family: var(--font-poppins);
+}
+@font-face {
+  font-family: "italic";
+  src: url("../public/fonts//PPEditorialNew-Italic-BF644b214fb0c0a.otf")
+    format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+.italic {
+  font-family: "italic";
 }

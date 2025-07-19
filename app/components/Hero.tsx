@@ -6,7 +6,7 @@ import { motion } from "framer-motion";
 
 export default function Hero() {
   return (
-    <div className="h-[100vh]   bg-[var(--background)] p-10 sm:p-20 flex flex-col items-end gap-20 justify-end  rounded-2xl">
+    <div className="h-[100vh]   bg-[var(--background)] p-10 sm:p-20 flex flex-col items-end gap-20 justify-end text-[var(--foreground)]  rounded-2xl">
       <motion.div
         initial={{
           y: -10,
@@ -21,8 +21,9 @@ export default function Hero() {
           duration: 2,
           bounce: 0,
         }}
+        className=""
       >
-        <motion.h2 className="w-full  text-xl md:text-5xl mt-10 ">
+        <motion.h2 className="w-1/2  text-xl md:text-5xl mt-10   ">
           <motion.span
             initial={{
               y: -10,
@@ -37,10 +38,10 @@ export default function Hero() {
               duration: 2,
               bounce: 0,
             }}
-            className="flex flex-col gap-4"
+            className="flex flex-col gap-4 "
           >
             <span>A developer who designs. A designer who codes.</span>
-            <span>
+            <span className="opacity-50 text-3xl">
               I help startups and brands bring ideas to life with powerful code
               and thoughtful design. Clean, modern, and always user-first
             </span>
@@ -112,7 +113,7 @@ export default function Hero() {
           className="opacity-60 hover:opacity-100"
         >
           <h3>Get in touch</h3>
-          <span className="cursor-pointer hover:opacity-100">
+          <span className="cursor-pointer opacity-50 hover:opacity-100">
             <TextAnimation
               title="mohamedelhaissan12@gmail.com"
               semiTitle="mohamedelhaissan12@gmail.com"
