@@ -2,6 +2,8 @@
 import { AnimatePresence, motion } from "framer-motion";
 import TextAnimation from "./TextAnimation";
 import { useState } from "react";
+import Link from "next/link";
+
 export default function Header() {
   const [openMenu, setOpenMenu] = useState(false);
 
@@ -23,14 +25,11 @@ export default function Header() {
       transition={{
         ease: "easeInOut",
       }}
-      style={{
-        borderBottom : "1px solid gray"
-      }}
-      className="flex h-[10vh] min-h-[60px] max-h-[80px] text-white fixed z-40 w-full top-0 left-0 font-semibold p-5 bg-whit/40  backdrop-blur-2xl  justify-between items-center "
+      className="flex h-[10vh] min-h-[60px] border-b border-b-[#272727] max-h-[80px] text-white fixed z-40 w-full top-0 left-0  p-5 bg-whit/40  backdrop-blur-2xl  justify-between items-center "
     >
       <h1 className="text-xl">elhaissan.dev</h1>
 
-      <button
+      {/* <button
         onClick={() => setOpenMenu(!openMenu)}
         className="hover:bg-[var(--hoveredBackground)] hover:text-[var(--foreground)]  relative z-50  px-4 py-1 rounded-md cursor-pointer"
       >
@@ -87,7 +86,35 @@ export default function Header() {
             </nav>
           </motion.div>
         )}
-      </AnimatePresence>
+      </AnimatePresence> */}
+      <nav>
+        <div className="h-full flex  gap-2 items-center justify-center">
+          <Link
+            href={""}
+            className="py-1   cursor-pointer font-semibold uppercase hoveredLink "
+          >
+            <TextAnimation title="Services" semiTitle="Services" />
+          </Link>
+          <Link
+            href={""}
+            className="py-1    font-semibold uppercase hoveredLink cursor-pointer "
+          >
+            <TextAnimation title="Projects" semiTitle="Projects" />
+          </Link>
+          <Link
+            href={""}
+            className="py-1    font-semibold uppercase hoveredLink cursor-pointer "
+          >
+            <TextAnimation title="About" semiTitle="About" />
+          </Link>
+          <Link
+            href={""}
+            className=" rounded-md   font-semibold uppercase hoveredLink cursor-pointer "
+          >
+            <TextAnimation title="Contact" semiTitle="Contact" />
+          </Link>
+        </div>
+      </nav>
     </motion.header>
   );
 }

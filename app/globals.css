@@ -4,6 +4,7 @@
   --background: #ffffff;
   --foreground: #0e0e0e;
   --hoveredBackground: #befc65;
+  --links-color: #8f8f8f;
 }
 
 @theme inline {
@@ -36,5 +37,11 @@ body {
   font-family: "italic";
 }
 .regular {
-  font-family: 'regular';
+  font-family: "regular";
+}
+.hoveredLink {
+  color: var(--links-color);
+}
+.hoveredLink:hover {
+  color: white;
 }
