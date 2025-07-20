@@ -96,22 +96,16 @@ export default function Header() {
             <TextAnimation title="Services" semiTitle="Services" />
           </Link>
           <Link
-            href={""}
+            href={"projects"}
             className="py-1    font-semibold uppercase hoveredLink cursor-pointer "
           >
             <TextAnimation title="Projects" semiTitle="Projects" />
           </Link>
           <Link
-            href={""}
+            href={"about"}
             className="py-1    font-semibold uppercase hoveredLink cursor-pointer "
           >
             <TextAnimation title="About" semiTitle="About" />
-          </Link>
-          <Link
-            href={""}
-            className=" rounded-md   font-semibold uppercase hoveredLink cursor-pointer "
-          >
-            <TextAnimation title="Contact" semiTitle="Contact" />
           </Link>
         </div>
       </nav>
