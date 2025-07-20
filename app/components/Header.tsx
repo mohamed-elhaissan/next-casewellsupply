@@ -90,7 +90,7 @@ export default function Header() {
       <nav>
         <div className="h-full flex  gap-2 items-center justify-center">
           <Link
-            href={""}
+            href={"services"}
             className="py-1   cursor-pointer font-semibold uppercase hoveredLink "
           >
             <TextAnimation title="Services" semiTitle="Services" />
