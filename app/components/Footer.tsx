@@ -72,13 +72,25 @@ export default function About() {
       </div>
       <div className="flex justify-between regular items-center p-4 border-t border-t-[#272727]">
         <div className="flex gap-5 items-center justify-center">
-          <Link href={""} className="hoveredLink ">
-            Instagram
+          <Link
+            target="_blank"
+            href={"https://x.com/elhcn"}
+            className="hoveredLink "
+          >
+            X
           </Link>
-          <Link href={""} className="hoveredLink">
+          <Link
+            href={"https://www.linkedin.com/in/mohamed-elhaissan-050509301/"}
+            target="_blank"
+            className="hoveredLink"
+          >
             LinkedIn
           </Link>
-          <Link href={""} className="hoveredLink">
+          <Link
+            target="_blank"
+            href={"https://github.com/mohamed-elhaissan"}
+            className="hoveredLink"
+          >
             Github
           </Link>
         </div>
