@@ -23,13 +23,16 @@ export default function Header() {
       transition={{
         ease: "easeInOut",
       }}
-      className="flex h-[10vh] min-h-[60px] max-h-[80px] text-[var(--foreground)] fixed z-40 w-full top-0 left-0 font-semibold p-5 bg-whit/40  backdrop-blur-2xl  justify-between items-center "
+      style={{
+        borderBottom : "1px solid gray"
+      }}
+      className="flex h-[10vh] min-h-[60px] max-h-[80px] text-white fixed z-40 w-full top-0 left-0 font-semibold p-5 bg-whit/40  backdrop-blur-2xl  justify-between items-center "
     >
       <h1 className="text-xl">elhaissan.dev</h1>
 
       <button
         onClick={() => setOpenMenu(!openMenu)}
-        className="hover:bg-[var(--hoveredBackground)] hover:text-[var(--foreground)]  relative z-50 text-[var(--foreground)] px-4 py-1 rounded-md cursor-pointer"
+        className="hover:bg-[var(--hoveredBackground)] hover:text-[var(--foreground)]  relative z-50  px-4 py-1 rounded-md cursor-pointer"
       >
         <TextAnimation title="Menu" semiTitle={openMenu ? "close" : "Open"} />
       </button>

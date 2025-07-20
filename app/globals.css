@@ -2,7 +2,7 @@
 
 :root {
   --background: #ffffff;
-  --foreground: #171717;
+  --foreground: #0e0e0e;
   --hoveredBackground: #befc65;
 }
 
@@ -13,20 +13,28 @@
   --font-mono: var(--font-geist-mono);
 }
 
-
-
 body {
-  background: var(--background);
+  background: var(--foreground);
   color: var(--background);
   font-family: var(--font-poppins);
 }
 @font-face {
   font-family: "italic";
-  src: url("../public/fonts//PPEditorialNew-Italic-BF644b214fb0c0a.otf")
+  src: url("../public/fonts/PPEditorialNew-Ultralight-BF644b21500d0c0.otf")
     format("truetype");
   font-style: normal;
   font-weight: 400;
 }
-.italic {
+@font-face {
+  font-family: "regular";
+  src: url("../public/fonts/PPEditorialNew-Regular-BF644b214ff145f.otf")
+    format("truetype");
+  font-style: normal;
+  font-weight: 400;
+}
+.light {
   font-family: "italic";
+}
+.regular {
+  font-family: 'regular';
 }
