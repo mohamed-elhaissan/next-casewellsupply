@@ -1,5 +1,14 @@
+"use client";
+
+import { motion } from "framer-motion";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
+
+interface servicesType {
+  service: string;
+  count: number;
+  description: string;
+}
 
 export default function Services() {
   return (
@@ -16,62 +25,80 @@ export default function Services() {
         </p>
       </div>
       <div>
-        <div className="flex justify-between p-20 border-b border-b-[#272727]">
-          <div className="flex  gap-1">
-            <h2 className="text-4xl">Custom Website Design</h2>
-            <sub className="text-xl">(01)</sub>
-          </div>
+        {services.map((item, index) => (
+          <motion.div
+          initial={{
+            y: 50,
+            opacity: 0,
+            scale: 0.95,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            scale: 1,
+          }}
+          transition={{
+            duration: 1.2,
+            ease: [0.215, 0.61, 0.355, 1], // easeOutCubic
+          }}
+         
+            key={index}
+            className="flex justify-between p-20 border-b border-b-[#272727]"
+          >
+            <div className="flex  gap-1">
+              <h2 className="text-4xl">{item.service}</h2>
+              <sub className="text-xl">{`(${item.count})`}</sub>
+            </div>
 
-          <p className="text-2xl">
-            Unique, user-focused designs that reflect your brand’s identity and
-            values.
-          </p>
-        </div>
-        <div className="flex justify-between p-20 border-b border-b-[#272727]">
-          <div className="flex  gap-1">
-            <h2 className="text-4xl">Frontend Development</h2>
-            <sub className="text-xl">(02)</sub>
-          </div>
-
-          <p className="text-2xl">
-            Fast, responsive, and accessible interfaces built with HTML, CSS,
-            JavaScript, React, or Next.js.
-          </p>
-        </div>
-        <div className="flex justify-between p-20 border-b border-b-[#272727]">
-          <div className="flex  gap-1">
-            <h2 className="text-4xl">UI/UX Design</h2>
-            <sub className="text-xl">(03)</sub>
-          </div>
-
-          <p className="text-2xl">
-            Clean, intuitive interfaces and user flows optimized for engagement
-            and ease of use.
-          </p>
-        </div>
-        <div className="flex justify-between p-20 border-b border-b-[#272727]">
-          <div className="flex  gap-1">
-            <h2 className="text-4xl">Animation & Micro-interactions</h2>
-            <sub className="text-xl">(04)</sub>
-          </div>
-
-          <p className="text-2xl">
-            Smooth, modern animations using Framer Motion, GSAP, and CSS for
-            dynamic experiences.
-          </p>
-        </div>
-        <div className="flex justify-between p-20 border-b border-b-[#272727]">
-          <div className="flex  gap-1">
-            <h2 className="text-4xl">Responsive Design</h2>
-            <sub className="text-xl">(05)</sub>
-          </div>
-
-          <p className="text-2xl">
-            Mobile-first development for seamless viewing across all devices.
-          </p>
-        </div>
+            <p className="text-2xl text-zinc-400">{item.description}</p>
+          </motion.div>
+        ))}
       </div>
       <Footer />
     </div>
   );
 }
+
+const services: servicesType[] = [
+  {
+    service: "Custom Website Design",
+    count: 1,
+    description: `Unique, user-focused designs that reflect your brand's identity and
+            values.`,
+  },
+  {
+    service: "Frontend Development",
+    count: 2,
+    description: `Fast, responsive, and accessible interfaces built with HTML, CSS,
+            JavaScript, React, or Next.js.
+          `,
+  },
+  {
+    service: "UI/UX Design",
+    count: 3,
+    description: `Clean, intuitive interfaces and user flows optimized for engagement
+            and ease of use.
+          `,
+  },
+  {
+    service: "Problem Solving",
+    count: 4,
+    description: `Analytical approach to identifying technical challenges and 
+            implementing efficient, scalable solutions.
+          `,
+  },
+  {
+    service: "Backend Development",
+    count: 5,
+    description: `Robust server-side applications, APIs, and databases built with 
+            Node.js, Python, or other modern technologies.
+          `,
+  },
+  {
+    service: "Mobile Development",
+    count: 6,
+    description: `Cross-platform mobile applications for iOS and Android using 
+            React Native, Flutter, or native development.
+          `,
+  },
+];

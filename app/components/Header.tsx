@@ -27,7 +27,9 @@ export default function Header() {
       }}
       className="flex h-[10vh] min-h-[60px] border-b border-b-[#272727] max-h-[80px] text-white fixed z-40 w-full top-0 left-0  p-5 bg-whit/40  backdrop-blur-2xl  justify-between items-center "
     >
-      <h1 className="text-xl">elhaissan.dev</h1>
+      <h1 className="text-xl">
+        <Link href={"/"}>elhaissan.dev</Link>
+      </h1>
 
       {/* <button
         onClick={() => setOpenMenu(!openMenu)}
@@ -88,7 +90,7 @@ export default function Header() {
         )}
       </AnimatePresence> */}
       <nav>
-        <div className="h-full flex  gap-2 items-center justify-center">
+        <div className="h-full flex  gap-5 items-center justify-center">
           <Link
             href={"services"}
             className="py-1   cursor-pointer font-semibold uppercase hoveredLink "
