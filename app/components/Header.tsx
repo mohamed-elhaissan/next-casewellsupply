@@ -65,7 +65,7 @@ export default function Header() {
         onClick={() => setOpenMenu(!openMenu)}
         className="hover:bg-[var(--hoveredBackground)] md:hidden regular text-xl hover:text-[var(--foreground)]  relative z-50  px-4 py-1 rounded-md cursor-pointer"
       >
-        {openMenu ? "close" : "Open"}
+        {openMenu ? "close" : "Menu"}
       </button>
       <AnimatePresence>
         {openMenu && (
