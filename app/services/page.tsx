@@ -15,18 +15,7 @@ export default function Services() {
     <div className="regular">
       <Header />
       <div className=" mt-42 p-20">
-        <h2 className="regular text-6xl text-white">Services</h2>
-        <p className="light text-xl w-1/2 opacity-50 tracking-wide">
-          I craft tailor-made digital experiences that blend design, art
-          direction, and seamless integration. My approach merges visual
-          harmony, aesthetic precision, and technical efficiency to bring clear,
-          bold, and meaningful projects to life—each one uniquely shaped to meet
-          your needs.
-        </p>
-      </div>
-      <div>
-        {services.map((item, index) => (
-          <motion.div
+        <motion.h2
           initial={{
             y: 50,
             opacity: 0,
@@ -41,7 +30,52 @@ export default function Services() {
             duration: 1.2,
             ease: [0.215, 0.61, 0.355, 1], // easeOutCubic
           }}
-         
+          className="regular text-6xl text-white"
+        >
+          Services
+        </motion.h2>
+        <motion.p
+          initial={{
+            y: 50,
+            opacity: 0,
+            scale: 0.95,
+          }}
+          whileInView={{
+            opacity: 1,
+            y: 0,
+            scale: 1,
+          }}
+          transition={{
+            delay : 0.5,
+            duration: 1.2,
+            ease: [0.215, 0.61, 0.355, 1], // easeOutCubic
+          }}
+          className="light text-xl w-1/2 opacity-50 tracking-wide"
+        >
+          I craft tailor-made digital experiences that blend design, art
+          direction, and seamless integration. My approach merges visual
+          harmony, aesthetic precision, and technical efficiency to bring clear,
+          bold, and meaningful projects to life—each one uniquely shaped to meet
+          your needs.
+        </motion.p>
+      </div>
+      <div>
+        {services.map((item, index) => (
+          <motion.div
+            initial={{
+              y: 50,
+              opacity: 0,
+              scale: 0.95,
+            }}
+            whileInView={{
+              opacity: 1,
+              y: 0,
+              scale: 1,
+            }}
+            transition={{
+              duration: 1.2,
+              ease: [0.215, 0.61, 0.355, 1], // easeOutCubic
+            }}
             key={index}
             className="flex justify-between p-20 border-b border-b-[#272727]"
           >

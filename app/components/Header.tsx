@@ -28,7 +28,7 @@ export default function Header() {
       className="flex h-[10vh] min-h-[60px] border-b border-b-[#272727] max-h-[80px] text-white fixed z-40 w-full top-0 left-0  p-5 bg-whit/40  backdrop-blur-2xl  justify-between items-center "
     >
       <h1 className="text-xl">
-        <Link href={"/"}>elhaissan.dev</Link>
+        <Link href={"/"} className="regular">elhaissan</Link>
       </h1>
 
       {/* <button
@@ -90,25 +90,28 @@ export default function Header() {
         )}
       </AnimatePresence> */}
       <nav>
-        <div className="h-full flex  gap-5 items-center justify-center">
+        <div className="h-full flex regular  gap-5 items-center justify-center">
           <Link
             href={"services"}
-            className="py-1   cursor-pointer font-semibold uppercase hoveredLink "
+            className="py-1   cursor-pointer text-xl hoveredLink "
           >
             <TextAnimation title="Services" semiTitle="Services" />
           </Link>
           <Link
             href={"projects"}
-            className="py-1    font-semibold uppercase hoveredLink cursor-pointer "
+            className="py-1    hoveredLink text-xl cursor-pointer "
           >
             <TextAnimation title="Projects" semiTitle="Projects" />
           </Link>
           <Link
             href={"about"}
-            className="py-1    font-semibold uppercase hoveredLink cursor-pointer "
+            className="py-1    hoveredLink  text-xl cursor-pointer "
           >
             <TextAnimation title="About" semiTitle="About" />
           </Link>
+          <a href="mailto:mohamedelhaissan12@gmail.com" className="hoveredLink py-1 text-xl">
+            <TextAnimation title="Let's Talk" semiTitle="Let's Talk" />
+          </a>
         </div>
       </nav>
     </motion.header>

@@ -1,3 +1,7 @@
+"use client";
+
+import { motion } from "framer-motion";
+
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 export default function About() {
@@ -5,7 +9,23 @@ export default function About() {
     <div>
       <Header />
 
-      <div className=" mt-42 p-20">
+      <motion.div
+        initial={{
+          y: 50,
+          opacity: 0,
+          scale: 0.95,
+        }}
+        whileInView={{
+          opacity: 1,
+          y: 0,
+          scale: 1,
+        }}
+        transition={{
+          duration: 1.2,
+          ease: [0.215, 0.61, 0.355, 1], // easeOutCubic
+        }}
+        className=" mt-42 p-20"
+      >
         <h2 className="regular text-6xl text-white">About Me</h2>
         <p className="light text-5xl  mt-10 opacity-50 tracking-wide">
           I'm a creative web developer and designer crafting clean, fast, and
@@ -13,7 +33,7 @@ export default function About() {
           using React, Next.js, Tailwind CSS, Framer Motion, and TypeScript —
           blending design with code to bring ideas to life.
         </p>
-      </div>
+      </motion.div>
       <Footer />
     </div>
   );

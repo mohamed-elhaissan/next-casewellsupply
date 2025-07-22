@@ -21,7 +21,25 @@ export default function Projects() {
     <div className="regular">
       <Header />
       <div className=" mt-42 p-20 ">
-        <h2 className="regular text-6xl text-white">Projects</h2>
+        <motion.h2
+          initial={{
+            y: 50,
+            opacity: 0,
+            scale: 0.95,
+          }}
+       animate = {{
+        y : 0,
+        opacity : 1,
+        scale : 1
+       }}
+          transition={{
+            duration: 1.2,
+            ease: [0.215, 0.61, 0.355, 1], // easeOutCubic
+          }}
+          className="regular text-6xl text-white"
+        >
+          Projects
+        </motion.h2>
       </div>
       <div>
         {projects.map((item, index) => (
@@ -55,7 +73,6 @@ export default function Projects() {
               width={500}
               height={200}
               priority={true}
-              placeholder="blur"
             />
           </motion.div>
         ))}
