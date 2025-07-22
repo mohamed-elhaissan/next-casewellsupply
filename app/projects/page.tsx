@@ -27,11 +27,11 @@ export default function Projects() {
             opacity: 0,
             scale: 0.95,
           }}
-       animate = {{
-        y : 0,
-        opacity : 1,
-        scale : 1
-       }}
+          animate={{
+            y: 0,
+            opacity: 1,
+            scale: 1,
+          }}
           transition={{
             duration: 1.2,
             ease: [0.215, 0.61, 0.355, 1], // easeOutCubic
@@ -62,7 +62,9 @@ export default function Projects() {
             className="border-t sticky top-0 left-0 bg-[#0E0E0E] border-t-[#272727] py-20 px-5 md:p-20 flex flex-col-reverse md:flex-row items-center justify-between"
           >
             <div>
-              <h2 className="text-2xl mt-10 md:mt-0 md:text-5xl">{item.title}</h2>
+              <h2 className="text-2xl mt-0 md:mt-0 md:text-5xl">
+                {item.title}
+              </h2>
               <p className="light text-xl mt-2 opacity-80">
                 {item.description}
               </p>
@@ -72,7 +74,7 @@ export default function Projects() {
               alt={`${item.imageURL}`}
               width={500}
               height={200}
-              priority={true}
+              priority
             />
           </motion.div>
         ))}
