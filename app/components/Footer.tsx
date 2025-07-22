@@ -19,7 +19,7 @@ export default function About() {
             whileHover="hovered"
             className="flex items-center   justify-center gap-10 overflow-hidden"
           >
-            <h2 className="light  text-5xl flex gap-2">
+            <h2 className="light  text-center  text-5xl flex gap-2">
               {"Got a project in mind?"
                 .split(" ")
                 .map((item: string, index: number) => (

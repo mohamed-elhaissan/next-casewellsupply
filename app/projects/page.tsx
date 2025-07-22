@@ -49,7 +49,7 @@ export default function Projects() {
               opacity: 0,
               scale: 0.95,
             }}
-            whileInView={{
+            animate={{
               opacity: 1,
               y: 0,
               scale: 1,
@@ -59,10 +59,10 @@ export default function Projects() {
               ease: [0.215, 0.61, 0.355, 1], // easeOutCubic
             }}
             key={index}
-            className="border-t sticky top-0 left-0 bg-[#0E0E0E] border-t-[#272727] p-20 flex items-center justify-between"
+            className="border-t sticky top-0 left-0 bg-[#0E0E0E] border-t-[#272727] py-20 px-5 md:p-20 flex flex-col-reverse md:flex-row items-center justify-between"
           >
             <div>
-              <h2 className="text-5xl">{item.title}</h2>
+              <h2 className="text-2xl mt-10 md:mt-0 md:text-5xl">{item.title}</h2>
               <p className="light text-xl mt-2 opacity-80">
                 {item.description}
               </p>

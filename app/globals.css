@@ -44,5 +44,5 @@ body {
   color: var(--links-color);
 }
 .hoveredLink:hover {
-  color: white;
+  color: var(--hoveredBackground);
 }

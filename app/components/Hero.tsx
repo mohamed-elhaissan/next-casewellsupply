@@ -21,10 +21,10 @@ export default function Hero() {
           duration: 2,
           bounce: 0,
         }}
-        className="w-1/2 text-center"
+        className="md:w-1/2 text-center"
       >
-        <motion.h2 className="text-xl md:text-5xl mt-10   ">
-          <motion.span className="flex flex-col gap-4 ">
+        <motion.h2 className="text-xl md:text-5xl mt-10    ">
+          <motion.span className="flex flex-col gap-4  ">
             <motion.span
               initial={{
                 y: 50,
@@ -40,7 +40,7 @@ export default function Hero() {
                 duration: 1.2,
                 ease: [0.215, 0.61, 0.355, 1], // easeOutCubic
               }}
-              className="regular inline-block"
+              className="regular inline-block text-4xl md:text-6xl"
             >
               A developer who designs. A designer who codes.
             </motion.span>
@@ -56,11 +56,11 @@ export default function Hero() {
                 scale: 1,
               }}
               transition={{
-                delay : 0.5, 
+                delay: 0.5,
                 duration: 1.2,
                 ease: [0.215, 0.61, 0.355, 1], // easeOutCubic
               }}
-              className="opacity-50 text-3xl light"
+              className="opacity-50 p-4 bg-[var(--hoveredBackground)] text-3xl light text-black"
             >
               I help startups and brands bring ideas to life with powerful code
               and thoughtful design. Clean, modern, and always user-first

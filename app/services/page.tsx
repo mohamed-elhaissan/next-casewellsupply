@@ -14,14 +14,14 @@ export default function Services() {
   return (
     <div className="regular">
       <Header />
-      <div className=" mt-42 p-20">
+      <div className=" mt-42 p-4 lg:p-20">
         <motion.h2
           initial={{
             y: 50,
             opacity: 0,
             scale: 0.95,
           }}
-          whileInView={{
+          animate={{
             opacity: 1,
             y: 0,
             scale: 1,
@@ -40,17 +40,17 @@ export default function Services() {
             opacity: 0,
             scale: 0.95,
           }}
-          whileInView={{
+          animate={{
             opacity: 1,
             y: 0,
             scale: 1,
           }}
           transition={{
-            delay : 0.5,
+            delay: 0.5,
             duration: 1.2,
             ease: [0.215, 0.61, 0.355, 1], // easeOutCubic
           }}
-          className="light text-xl w-1/2 opacity-50 tracking-wide"
+          className="light text-xl lg:w-1/2 text-zinc-400 mt-4 mb-20 opacity-50 tracking-wide"
         >
           I craft tailor-made digital experiences that blend design, art
           direction, and seamless integration. My approach merges visual
@@ -59,7 +59,7 @@ export default function Services() {
           your needs.
         </motion.p>
       </div>
-      <div>
+      <div className="border-t border-t-[#272727]">
         {services.map((item, index) => (
           <motion.div
             initial={{
@@ -67,7 +67,7 @@ export default function Services() {
               opacity: 0,
               scale: 0.95,
             }}
-            whileInView={{
+            animate={{
               opacity: 1,
               y: 0,
               scale: 1,
@@ -77,14 +77,14 @@ export default function Services() {
               ease: [0.215, 0.61, 0.355, 1], // easeOutCubic
             }}
             key={index}
-            className="flex justify-between p-20 border-b border-b-[#272727]"
+            className="flex sticky left-0 top-0 justify-between bg-[#0E0E0E] flex-col md:flex-row  px-4 py-20 md:p-20 border-b border-b-[#272727]"
           >
             <div className="flex  gap-1">
-              <h2 className="text-4xl">{item.service}</h2>
-              <sub className="text-xl">{`(${item.count})`}</sub>
+              <h2 className="text-2xl mb-4 md:text-4xl">{item.service}</h2>
+              <sub className="md:text-xl">{`(${item.count})`}</sub>
             </div>
 
-            <p className="text-2xl text-zinc-400">{item.description}</p>
+            <p className="text-base md:text-2xl text-zinc-400">{item.description}</p>
           </motion.div>
         ))}
       </div>

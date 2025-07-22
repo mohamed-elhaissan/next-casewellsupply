@@ -25,71 +25,14 @@ export default function Header() {
       transition={{
         ease: "easeInOut",
       }}
-      className="flex h-[10vh] min-h-[60px] border-b border-b-[#272727] max-h-[80px] text-white fixed z-40 w-full top-0 left-0  p-5 bg-whit/40  backdrop-blur-2xl  justify-between items-center "
+      className="flex h-[10vh] min-h-[60px] border-b border-b-[#272727] max-h-[80px] text-white sticky z-40 w-full top-0 left-0  p-5 bg-whit/40  backdrop-blur-2xl  justify-between items-center "
     >
       <h1 className="text-xl">
-        <Link href={"/"} className="regular">elhaissan</Link>
+        <Link href={"/"} className="regular relative z-50">
+          elhaissan
+        </Link>
       </h1>
-
-      {/* <button
-        onClick={() => setOpenMenu(!openMenu)}
-        className="hover:bg-[var(--hoveredBackground)] hover:text-[var(--foreground)]  relative z-50  px-4 py-1 rounded-md cursor-pointer"
-      >
-        <TextAnimation title="Menu" semiTitle={openMenu ? "close" : "Open"} />
-      </button>
-      <AnimatePresence>
-        {openMenu && (
-          <motion.div
-            key={"navContainer"}
-            initial={{
-              y: "-100%",
-              opacity: 0,
-            }}
-            animate={{
-              y: 0,
-              opacity: 1,
-            }}
-            exit={{
-              y: "-100%",
-              opacity: 0,
-            }}
-            className="absolute left-0 top-0 w-full h-screen"
-          >
-            <nav className="bg-[#e3f794]    w-full h-screen rounded-2xl z-20  text-4xl font-black uppercase sm:text-7xl md:text-8xl lg:text-9xl">
-              <div className="h-full flex flex-col text-6xl items-center justify-center">
-                <button
-                  onClick={() => {
-                    setOpenMenu(false);
-                    scrollToSection("work");
-                  }}
-                  className="py-1 px-3  cursor-pointer uppercase  rounded-md hover:bg-[#befc65]"
-                >
-                  <TextAnimation title="work" semiTitle="work" />
-                </button>
-                <button
-                  onClick={() => {
-                    setOpenMenu(false);
-                    scrollToSection("info");
-                  }}
-                  className="px-3 rounded-md  cursor-pointer uppercase hover:bg-[#befc65]"
-                >
-                  <TextAnimation title="Info" semiTitle="Info" />
-                </button>
-                <a
-                  onClick={() => {
-                    setOpenMenu(false);
-                  }}
-                  href="mailto:mhalwasoffice@gmail.com"
-                  className="px-3 rounded-md  cursor-pointer uppercase hover:bg-[#befc65] "
-                >
-                  <TextAnimation title="Let's Talk" semiTitle="Let's Talk" />
-                </a>
-              </div>
-            </nav>
-          </motion.div>
-        )}
-      </AnimatePresence> */}
-      <nav>
+      <nav className="hidden md:block">
         <div className="h-full flex regular  gap-5 items-center justify-center">
           <Link
             href={"services"}
@@ -109,11 +52,76 @@ export default function Header() {
           >
             <TextAnimation title="About" semiTitle="About" />
           </Link>
-          <a href="mailto:mohamedelhaissan12@gmail.com" className="hoveredLink py-1 text-xl">
+          <a
+            href="mailto:mohamedelhaissan12@gmail.com"
+            className="hoveredLink py-1 text-xl"
+          >
             <TextAnimation title="Let's Talk" semiTitle="Let's Talk" />
           </a>
         </div>
       </nav>
+
+      <button
+        onClick={() => setOpenMenu(!openMenu)}
+        className="hover:bg-[var(--hoveredBackground)] md:hidden regular text-xl hover:text-[var(--foreground)]  relative z-50  px-4 py-1 rounded-md cursor-pointer"
+      >
+        {openMenu ? "close" : "Open"}
+      </button>
+      <AnimatePresence>
+        {openMenu && (
+          <motion.div
+            key={"navContainer"}
+            initial={{
+              y: 50,
+              opacity: 0,
+              scale: 0.95,
+            }}
+            animate={{
+              y: 0,
+              opacity: 1,
+              scale: 1,
+            }}
+            transition={{
+              ease: [0.215, 0.61, 0.355, 1], // easeOutCubic
+            }}
+            exit={{
+              y: 50,
+              opacity: 0,
+              scale: 0.95,
+            }}
+            className="absolute left-0 top-0 w-full h-screen"
+          >
+            <nav className="bg-[#0E0E0E] light   w-full h-screen rounded-2xl z-20  text-4xl font-black uppercase sm:text-7xl md:text-8xl lg:text-9xl">
+              <div className="h-full flex flex-col text-6xl gap-4 items-center justify-center">
+                <Link
+                  href={"services"}
+                  className="py-1   cursor-pointer text-5xl hoveredLink "
+                >
+                  <TextAnimation title="Services" semiTitle="Services" />
+                </Link>
+                <Link
+                  href={"projects"}
+                  className="py-1    hoveredLink text-5xl cursor-pointer "
+                >
+                  <TextAnimation title="Projects" semiTitle="Projects" />
+                </Link>
+                <Link
+                  href={"about"}
+                  className="py-1    hoveredLink  text-5xl cursor-pointer "
+                >
+                  <TextAnimation title="About" semiTitle="About" />
+                </Link>
+                <a
+                  href="mailto:mohamedelhaissan12@gmail.com"
+                  className="hoveredLink py-1 text-5xl"
+                >
+                  <TextAnimation title="Let's Talk" semiTitle="Let's Talk" />
+                </a>
+              </div>
+            </nav>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </motion.header>
   );
 }
