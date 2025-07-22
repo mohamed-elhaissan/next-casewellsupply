@@ -10,6 +10,9 @@ const inter = Inter({
 });
 export const metadata: Metadata = {
   title: "Mohamed Elhaissan | Frontend Engineer",
+  icons: {
+    icon: "/logo.svg",
+  },
   description: "I'm a passionate frontend engineer",
 };
 

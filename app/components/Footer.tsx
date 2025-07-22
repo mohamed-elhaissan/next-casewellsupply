@@ -51,7 +51,13 @@ export default function About() {
                   },
                 }}
               >
-                <Image src={arrow} alt="arrow Svg" />
+                <Image
+                  src={arrow}
+                  alt="arrow Svg1"
+                  width={80}
+                  height={80}
+                  priority
+                />
               </motion.span>
               <motion.span
                 variants={{
@@ -64,7 +70,13 @@ export default function About() {
                 }}
                 className="inline-block absolute inset-0"
               >
-                <Image src={arrow} alt="arrow Svg" />
+                <Image
+                  src={arrow}
+                  alt="arrow Svg2"
+                  width={80}
+                  height={80}
+                  priority
+                />
               </motion.span>
             </div>
           </motion.div>
